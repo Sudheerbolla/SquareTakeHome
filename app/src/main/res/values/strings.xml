@@ -1,0 +1,8 @@
+<resources>
+
+    <string name="app_name">Square Take Home</string>
+    <string name="no_data_from_the_server">Error getting Data from the Server</string>
+    <string name="error_getting_data_from_api">Error Getting data from API</string>
+    <string name="retry">Retry</string>
+
+</resources>

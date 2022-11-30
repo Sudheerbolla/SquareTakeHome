@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="employeeModel"
+            type="com.squaretakehome.models.EmployeeModel" />
+
+        <variable
+            name="viewModel"
+            type="com.squaretakehome.viewmodels.EmployeesViewModel" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/five_dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/itemBody"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgViewEmployee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                app:imageUrlItem='@{employeeModel}'
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtEmployeeType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/fifteen_dp"
+                android:background="@drawable/job_border"
+                android:gravity="center"
+                android:paddingStart="@dimen/ten_dp"
+                android:paddingTop="@dimen/seven_dp"
+                android:paddingEnd="@dimen/ten_dp"
+                android:paddingBottom="@dimen/seven_dp"
+                android:text="@{employeeModel.employeeType}"
+                android:textColor="@color/colorButtonDark"
+                android:textSize="@dimen/eighteen_sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtFullName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/semi_transparent"
+                android:gravity="center"
+                android:padding="@dimen/seven_dp"
+                android:text="@{employeeModel.fullName}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/eighteen_sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/txtEmailAddress"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtEmailAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/semi_transparent"
+                android:gravity="center"
+                android:padding="@dimen/seven_dp"
+                android:text="@{employeeModel.emailAddress}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sixteen_sp"
+                app:layout_constraintBottom_toTopOf="@id/txtPhone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/semi_transparent"
+                android:gravity="center"
+                android:padding="@dimen/seven_dp"
+                android:text="@{employeeModel.phoneNumber}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sixteen_sp"
+                app:layout_constraintBottom_toTopOf="@id/txtBio"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtBio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/semi_transparent"
+                android:gravity="center"
+                android:padding="@dimen/seven_dp"
+                android:text="@{employeeModel.biography}"
+                android:textColor="@color/colorGrey"
+                android:textSize="@dimen/sixteen_sp"
+                app:layout_constraintBottom_toTopOf="@id/txtTeam"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtTeam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/fifteen_dp"
+                android:background="@drawable/bg_green_border"
+                android:gravity="center"
+                android:paddingStart="@dimen/ten_dp"
+                android:paddingTop="@dimen/seven_dp"
+                android:paddingEnd="@dimen/ten_dp"
+                android:paddingBottom="@dimen/seven_dp"
+                android:text="@{employeeModel.team}"
+                android:textColor="@color/colorGreen"
+                android:textSize="@dimen/eighteen_sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/imgViewEmployee"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

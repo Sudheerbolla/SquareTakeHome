@@ -62,7 +62,7 @@ android {
     namespace 'com.squaretakehome'
 }
 
-dependencies {
+dependencies{
     implementation 'androidx.core:core-ktx:1.9.0'
     implementation 'androidx.appcompat:appcompat:1.5.1'
     implementation 'com.google.android.material:material:1.7.0'
@@ -72,20 +72,17 @@ dependencies {
 
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
 
-    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.1"
-
     //ViewModel and livedata
     implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
 
     //Retrofit
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.okhttp3:logging-interceptor:4.9.0'
-
-    testImplementation 'com.squareup.okhttp3:mockwebserver:4.10.0'
-
+//    image loading
+//    Glide
     implementation 'com.github.bumptech.glide:glide:4.12.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
-
+//    Custom Implementation
     implementation project(':ImageLoadingLibrary')
 
     /*Moshi*/
@@ -97,7 +94,10 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.4'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
-    androidTestImplementation "org.mockito.kotlin:mockito-kotlin:3.5.0"
+    androidTestImplementation 'org.mockito.kotlin:mockito-kotlin:4.1.0'
+
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.1"
+    testImplementation 'com.squareup.okhttp3:mockwebserver:4.10.0'
 
 
 }

@@ -37,7 +37,7 @@ class EmployeeRepositoryImpl(
                 httpCode = e.code(),
                 errorMessage = e.message()
             )
-        } catch (e: IOException) {
+        } catch (e: Exception) {
             ApiResponse(
                 errorMessage = e.message
             )

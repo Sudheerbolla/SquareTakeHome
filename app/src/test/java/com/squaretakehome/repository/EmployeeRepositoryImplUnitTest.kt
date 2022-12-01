@@ -76,27 +76,7 @@ class EmployeeRepositoryImplUnitTest {
 
         val actualResponse = repository.getMalformedEmployees()
 
-        assertThat(actualResponse.body?.employeesList?.count(), `is`(11))
-        assertThat(actualResponse.body?.employeesList?.get(9)?.team, `is`("Hardware"))
-        assertThat(actualResponse.body?.employeesList?.get(9)?.uuid, `is`(nullValue()))
-        assertThat(actualResponse.body?.employeesList?.get(1)?.team, `is`(nullValue()))
-        assertThat(actualResponse.body?.employeesList?.get(10)?.biography, `is`("I work for you."))
-        assertThat(
-            actualResponse.body?.employeesList?.first()?.fullName,
-            `is`(createEmployee.fullName)
-        )
-        assertThat(
-            actualResponse.body?.employeesList?.first()?.phoneNumber,
-            `is`(createEmployee.phoneNumber)
-        )
-        assertThat(
-            actualResponse.body?.employeesList?.first()?.emailAddress,
-            `is`(createEmployee.emailAddress)
-        )
-        assertThat(
-            actualResponse.body?.employeesList?.first()?.biography,
-            `is`(createEmployee.biography)
-        )
+        assertThat(actualResponse.body, `is`(nullValue()))
     }
 
     // Employee

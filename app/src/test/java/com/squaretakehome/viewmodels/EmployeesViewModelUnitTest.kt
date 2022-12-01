@@ -11,7 +11,6 @@ import org.junit.Before
 import org.junit.Test
 
 @OptIn(ExperimentalCoroutinesApi::class)
-//@RunWith(JUnit4::class)
 class EmployeesViewModelUnitTest {
     private lateinit var viewModel: EmployeesViewModel
     private val mainThreadSurrogate = newSingleThreadContext("UI thread")

@@ -32,7 +32,6 @@ class HomeActivity : AppCompatActivity() {
                 this,
                 MyViewModelFactory(application)
             )[EmployeesViewModel::class.java]
-//        viewModel = EmployeesViewModel(application)
         binding.viewModel = viewModel
         setUpRecyclerView()
         setViewModelObservers()

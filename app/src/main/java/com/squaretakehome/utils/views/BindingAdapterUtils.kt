@@ -28,7 +28,6 @@ object BindingAdapterUtils {
                     .error(R.drawable.ic_image_error).placeholder(R.drawable.ic_image_loading)
                     .diskCacheStrategy(DiskCacheStrategy.ALL)
                     .dontAnimate()
-//                    .diskCacheStrategy(DiskCacheStrategy.AUTOMATIC)
                     .into(imageView)
             } else {
                 BaseApplication.imageLoader?.displayImage(it, true, imageView)

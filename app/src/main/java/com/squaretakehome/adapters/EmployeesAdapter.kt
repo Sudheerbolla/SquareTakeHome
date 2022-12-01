@@ -9,7 +9,7 @@ import com.squaretakehome.R
 import com.squaretakehome.databinding.EmployeeItemBinding
 import com.squaretakehome.models.EmployeeModel
 
-class EmployeesAdapter() : RecyclerView.Adapter<MainViewHolder>() {
+class EmployeesAdapter : RecyclerView.Adapter<MainViewHolder>() {
 
     var employeeModelArrayList: ArrayList<EmployeeModel>
 

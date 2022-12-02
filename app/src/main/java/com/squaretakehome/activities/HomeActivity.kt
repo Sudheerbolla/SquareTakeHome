@@ -21,9 +21,11 @@ class HomeActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_home)
-        binding.lifecycleOwner = this
-        initComponents()
+        if(savedInstanceState == null || binding == null) {
+            binding = DataBindingUtil.setContentView(this, R.layout.activity_home)
+            binding.lifecycleOwner = this
+            initComponents()
+        }
     }
 
     private fun initComponents() {
